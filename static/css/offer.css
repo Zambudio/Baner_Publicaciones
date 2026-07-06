@@ -105,6 +105,24 @@ body {
   pointer-events: none;
 }
 
+.price-now::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 60%;
+  height: 220%;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(255, 255, 255, 0.08) 55%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
 .badge-pill {
   position: relative;
   display: inline-block;
@@ -144,9 +162,9 @@ body {
 .price-before {
   position: relative;
   z-index: 2;
-  margin-top: -30px;
-  width: 108%;
-  margin-left: -4%;
+  margin-top: -26px;
+  width: 102%;
+  margin-left: -1%;
   min-height: 96px;
   display: flex;
   align-items: center;
@@ -187,22 +205,22 @@ body {
 .savings-row {
   position: relative;
   z-index: 1;
-  margin-top: 18px;
+  margin-top: -6px;
   width: 94%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   align-items: center;
-  min-height: 130px;
+  min-height: 136px;
 }
 
 .discount-circle {
   position: absolute;
-  left: -32px;
+  left: -34px;
   top: 50%;
   transform: translateY(-50%);
-  width: 152px;
-  height: 152px;
+  width: 168px;
+  height: 168px;
   border-radius: 50%;
   z-index: 3;
   background: linear-gradient(135deg, #ffe500 0%, #ffb200 55%, #ff8a00 100%);
@@ -227,27 +245,38 @@ body {
 
 .sparkle {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  background: #ffe066;
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.85);
   border-radius: 3px;
   transform: rotate(45deg);
-  box-shadow: 0 2px 4px rgba(120, 60, 0, 0.3);
 }
 
-.sparkle-1 { top: -6px; right: 6px; }
-.sparkle-2 { bottom: 2px; left: -8px; width: 10px; height: 10px; }
+/* un único brillo sutil pegado a la superficie del propio círculo, no flotando fuera */
+.sparkle-1 { top: 20px; right: 30px; width: 9px; height: 9px; background: rgba(255, 255, 255, 0.55); }
+.sparkle-2 { display: none; }
+
+.accent-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #ff8a00;
+}
 
 .savings-card {
+  position: relative;
   flex: 1;
   min-height: 116px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 18px 26px 18px 150px;
+  padding: 18px 34px 18px 158px;
   border-radius: 36px;
   background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
 }
 
 .savings-label {
@@ -263,6 +292,9 @@ body {
   font-size: 38px;
   line-height: 1.2;
 }
+
+.savings-card .accent-arrow-1 { top: 22px; right: 18px; }
+.savings-card .accent-arrow-2 { bottom: 22px; right: 30px; opacity: 0.6; transform: scale(0.8); }
 
 /* ---------- footer ---------- */
 
