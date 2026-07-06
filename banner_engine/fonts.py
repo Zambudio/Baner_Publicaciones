@@ -1,7 +1,7 @@
 """Carga y cachea las fuentes locales (Segoe UI) como base64 para @font-face.
 
 Las fuentes viven en static/fonts/ (copiadas una vez desde el sistema,
-ver README_BANNER_ENGINE.md). Nunca se descargan en tiempo de ejecución.
+ver README.md). Nunca se descargan en tiempo de ejecución.
 """
 from __future__ import annotations
 

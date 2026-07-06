@@ -1,6 +1,6 @@
 """
 LEGACY / DEPRECATED (2026-07-06) - sustituido por banner_engine/ (HTML/CSS +
-Playwright). Ver README_BANNER_ENGINE.md. No usar para nuevos desarrollos;
+Playwright). Ver README.md. No usar para nuevos desarrollos;
 se conserva sin modificar porque TemlateChollos.py todavia importa 4 helpers
 de este archivo (format_price, trim_image_whitespace, contain_image,
 fit_font_to_width). No se ha encontrado ningun otro archivo que dependa de

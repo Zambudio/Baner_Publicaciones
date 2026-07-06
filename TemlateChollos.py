@@ -2,7 +2,7 @@
 LEGACY / DEPRECATED (2026-07-06) - sustituido por banner_engine/ (HTML/CSS +
 Playwright + Jinja2), que reemplaza el bloque de precios por un diseno con
 gradientes/sombras/brillos reales en vez de dibujo manual con Pillow. Ver
-README_BANNER_ENGINE.md para instalacion y uso del nuevo motor. Este archivo
+README.md para instalacion y uso del nuevo motor. Este archivo
 se conserva sin modificar (no se ha encontrado nada mas que lo importe) por
 si algo externo depende todavia de generar_post_v3/generar_banner_chollo.
 
