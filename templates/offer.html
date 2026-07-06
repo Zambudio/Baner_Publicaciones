@@ -20,18 +20,21 @@
         <div class="price-stack">
 
           <div class="card price-now">
-            <div class="badge-pill">PRECIO TOP <span class="star">&#9733;</span></div>
+            <span class="card-shine"></span>
+            <span class="card-shine card-shine-2"></span>
+            <div class="badge-pill"><span class="badge-star">&#9733;</span>PRECIO TOP</div>
             <div class="price-value {{ current_price_class }}">{{ current_price_display }}</div>
           </div>
 
           <div class="card price-before">
+            <span class="card-shine"></span>
             <span class="price-before-value {{ previous_price_class }}">{{ previous_price_display }}</span>
           </div>
 
           <div class="savings-row">
+            <span class="deco-star deco-star-1"></span>
+            <span class="deco-star deco-star-2"></span>
             <div class="discount-circle">
-              <span class="sparkle sparkle-1"></span>
-              <span class="sparkle sparkle-2"></span>
               <span class="discount-value {{ discount_class }}">{{ discount_display }}</span>
             </div>
             <div class="card savings-card">
