@@ -1,0 +1,11 @@
+{
+  "product_name": "Producto de prueba (precio largo)",
+  "product_image": "producto_test.png",
+  "current_price": "1.299,99 €",
+  "previous_price": "1.599,00 €",
+  "discount_percentage": "-19%",
+  "saving_amount": "299,01 €",
+  "affiliate_url": "",
+  "category": "Tecnologia",
+  "subcategory": "Chollos"
+}

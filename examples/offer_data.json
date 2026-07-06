@@ -1,0 +1,11 @@
+{
+  "product_name": "Producto de prueba",
+  "product_image": "producto_test.png",
+  "current_price": "53,29 €",
+  "previous_price": "65,99 €",
+  "discount_percentage": "-19%",
+  "saving_amount": "12,70 €",
+  "affiliate_url": "",
+  "category": "Tecnologia",
+  "subcategory": "Chollos"
+}

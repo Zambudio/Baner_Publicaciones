@@ -1,0 +1,302 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 1200px;
+  height: 1200px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+body {
+  font-family: 'Segoe UI Local', Arial, sans-serif;
+}
+
+.banner {
+  width: 1200px;
+  height: 1200px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  position: relative;
+}
+
+/* ---------- columna de producto ---------- */
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 0;
+}
+
+.product-col {
+  flex: 0 0 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.product-circle {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: #ebf3ff;
+  z-index: 0;
+}
+
+.product-image {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  max-height: 720px;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 28px rgba(15, 23, 42, 0.18));
+}
+
+/* ---------- columna de precios ---------- */
+
+.price-col {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-stack {
+  width: 100%;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.card {
+  border-radius: 40px;
+}
+
+/* Tarjeta azul: precio actual */
+
+.price-now {
+  position: relative;
+  z-index: 3;
+  min-height: 230px;
+  padding: 30px 24px 26px;
+  border-radius: 46px;
+  text-align: center;
+  background: linear-gradient(180deg, #35b4ff 0%, #0f6dee 32%, #0038b8 68%, #001056 100%);
+  box-shadow: 0 18px 30px rgba(0, 40, 130, 0.35), inset 0 2px 0 rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+.price-now::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -20%;
+  width: 140%;
+  height: 160px;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+
+.badge-pill {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(180deg, #7ecbff, #2f8fff);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  padding: 8px 24px;
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(0, 30, 100, 0.35);
+  z-index: 2;
+}
+
+.badge-pill .star {
+  color: #ffd400;
+}
+
+.price-value {
+  position: relative;
+  z-index: 2;
+  margin-top: 26px;
+  color: #ffffff;
+  font-weight: 800;
+  white-space: nowrap;
+  line-height: 1;
+  text-shadow: 0 4px 10px rgba(0, 20, 80, 0.35);
+}
+
+.price-value.price-xl { font-size: 112px; }
+.price-value.price-lg { font-size: 92px; }
+.price-value.price-md { font-size: 76px; }
+.price-value.price-sm { font-size: 62px; }
+
+/* Tarjeta naranja: precio anterior */
+
+.price-before {
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+  width: 108%;
+  margin-left: -4%;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #ff9a2e 0%, #ff6a00 55%, #d94400 100%);
+  box-shadow: 0 12px 20px rgba(180, 60, 0, 0.3);
+}
+
+.price-before-value {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.price-before-value.price-xl { font-size: 44px; }
+.price-before-value.price-lg { font-size: 38px; }
+.price-before-value.price-md { font-size: 32px; }
+.price-before-value.price-sm { font-size: 27px; }
+
+.price-before-value::after {
+  content: "";
+  position: absolute;
+  left: -6%;
+  right: -6%;
+  top: 50%;
+  height: 4px;
+  background: #14110c;
+  border-radius: 2px;
+  transform: translateY(-50%) rotate(-9deg);
+}
+
+/* Fila: círculo de descuento + tarjeta de ahorro */
+
+.savings-row {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  width: 94%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  min-height: 130px;
+}
+
+.discount-circle {
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 152px;
+  height: 152px;
+  border-radius: 50%;
+  z-index: 3;
+  background: linear-gradient(135deg, #ffe500 0%, #ffb200 55%, #ff8a00 100%);
+  border: 5px solid #ff6a00;
+  box-shadow: 0 10px 22px rgba(120, 60, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount-value {
+  color: #0f172a;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.discount-value.price-xl { font-size: 50px; }
+.discount-value.price-lg { font-size: 42px; }
+.discount-value.price-md { font-size: 36px; }
+.discount-value.price-sm { font-size: 30px; }
+
+.sparkle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #ffe066;
+  border-radius: 3px;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 4px rgba(120, 60, 0, 0.3);
+}
+
+.sparkle-1 { top: -6px; right: 6px; }
+.sparkle-2 { bottom: 2px; left: -8px; width: 10px; height: 10px; }
+
+.savings-card {
+  flex: 1;
+  min-height: 116px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 26px 18px 150px;
+  border-radius: 36px;
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.savings-label {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.savings-value {
+  color: #ffd400;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  height: 60px;
+  width: auto;
+}
+
+.brand-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0863eb;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.store-card {
+  height: 72px;
+  width: auto;
+}

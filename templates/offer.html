@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>offer</title>
+<style>
+{{ font_face_css | safe }}
+{{ offer_css | safe }}
+</style>
+</head>
+<body>
+  <div class="banner">
+    <div class="content">
+      <div class="product-col">
+        <div class="product-circle"></div>
+        <img class="product-image" src="{{ product_image_uri }}" alt="producto">
+      </div>
+
+      <div class="price-col">
+        <div class="price-stack">
+
+          <div class="card price-now">
+            <div class="badge-pill">PRECIO TOP <span class="star">&#9733;</span></div>
+            <div class="price-value {{ current_price_class }}">{{ current_price_display }}</div>
+          </div>
+
+          <div class="card price-before">
+            <span class="price-before-value {{ previous_price_class }}">{{ previous_price_display }}</span>
+          </div>
+
+          <div class="savings-row">
+            <div class="discount-circle">
+              <span class="sparkle sparkle-1"></span>
+              <span class="sparkle sparkle-2"></span>
+              <span class="discount-value {{ discount_class }}">{{ discount_display }}</span>
+            </div>
+            <div class="card savings-card">
+              <div class="savings-label">Ahorras</div>
+              <div class="savings-value">{{ saving_display }}</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <img class="brand-logo" src="{{ brand_logo_uri }}" alt="{{ brand_name }}">
+        <span class="brand-name">{{ brand_name }}</span>
+      </div>
+      <div class="footer-right">
+        <img class="store-card" src="{{ store_logo_uri }}" alt="{{ store_name }}">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
